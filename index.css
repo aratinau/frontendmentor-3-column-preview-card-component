@@ -75,6 +75,7 @@ body {
     font-weight: 400;
     font-size: var(--fs-300);
     background-color: var(--transparent-white);
+    color: hsl(var(--white));
 }
 
 /* make images easier to work with */
@@ -100,6 +101,12 @@ li {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -116,3 +123,117 @@ li {
 /* ------------------- */
 /* ------------------- */
 /* ------------------- */
+
+.container-main {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+
+    max-width: 1440px;
+}
+
+section {
+    padding: 3em;
+    width: 17em;
+}
+
+section h2 {
+    text-transform: uppercase;
+    font-family: var(--ff-cursive);
+    font-size: 5vh;
+}
+
+h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+/* sedans */
+.block-sedans {
+    background-color: hsl(var(--bright-orange));
+}
+.block-sedans > button {
+    color: hsl(var(--bright-orange));
+}
+
+/* suvs */
+.block-suvs {
+    background-color: hsl(var(--dark-cyan));
+}
+.block-suvs > button {
+    color: hsl(var(--dark-cyan));
+}
+
+/* luxury */
+.block-luxury {
+    background-color: hsl(var(--very-dark-cyan));
+}
+.block-luxury > button {
+    color: hsl(var(--very-dark-cyan));
+}
+
+section > button {
+    padding: .5em 1em;
+    border-radius: 50px;
+    outline: 2px solid hsl(var(--white));
+    color: hsl(var(--bright-orange));
+}
+
+section > button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+/**************/
+/*** footer ***/
+/**************/
+
+footer {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: .5em;
+    text-align: center;
+    background-color: hsl(var(--very-dark-cyan));
+}
+
+footer a {
+    color: hsl(var(--very-light-gray));
+}
+
+@media (max-width: 860px) {
+    .container-main {
+        display: block;
+        justify-content: center;
+        flex-direction: column;
+
+        position: static;
+        top: 50%;
+        right: 50%;
+        transform: none;
+    }
+
+    section {
+        width: auto;
+        padding: 2.5em;
+    }
+
+    footer {
+        position: sticky;
+    }
+
+    main {
+        margin: 5rem;
+    }
+}
