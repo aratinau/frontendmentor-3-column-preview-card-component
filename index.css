@@ -74,7 +74,7 @@ body {
     font-family: var(--ff-sans-serif);
     font-weight: 400;
     font-size: var(--fs-300);
-    background-color: var(--transparent-white);
+    background-color: hsl(var(--very-light-gray));
     color: hsl(var(--white));
 }
 
